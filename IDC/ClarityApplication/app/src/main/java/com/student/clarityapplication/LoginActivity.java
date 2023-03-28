@@ -1,4 +1,4 @@
-package com.student.clarityapp;
+package com.student.clarityapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
