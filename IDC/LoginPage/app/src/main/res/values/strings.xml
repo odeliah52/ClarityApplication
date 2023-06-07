@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">LoginPage</string>
     <string name="login_with_google">Login with Google</string>
+    <string name="welcome_user">Welcome, User</string>
+    <string name="message">Message</string>
+    <string name="user_name">User Name</string>
 </resources>
