@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "367702557284",
+    "project_id": "dpad-login",
+    "storage_bucket": "dpad-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367702557284:android:31bef4917891da8df41571",
+        "android_client_info": {
+          "package_name": "co.il.dmobile.ex3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367702557284-h289t70lbtglhq4g9js11ebndpququsv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.il.dmobile.ex3",
+            "certificate_hash": "464626c9acbf4dba67e5affd2d25985393d0c30b"
+          }
+        },
+        {
+          "client_id": "367702557284-mf4gh2hrh98eifp7e91oe776p7t9vv3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgjp1qorbpdbeNzlAquafLiSo8HqHg10M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367702557284-mf4gh2hrh98eifp7e91oe776p7t9vv3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
