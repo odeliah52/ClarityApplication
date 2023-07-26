@@ -28,7 +28,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageViewHolder> {
     private List<chatMessage> messages = new ArrayList<>();
     private String userID;
 
-
     public MessageAdapter(String userID) {
         this.userID = userID;
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -58,20 +57,22 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageViewHolder> {
         db.collection("chat").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                messages = new ArrayList<>();
-                for (DocumentSnapshot document : value.getDocuments()) {
-                    try {
-                        chatMessage m = new chatMessage(
-                                document.get("userPhoto").toString(),
-                                document.get("userName").toString(),
-                                document.get("userID").toString(),
-                                document.get("message").toString()
-                        );
-                        messages.add(m);
-                    } catch (Exception e) {
+                if (value != null) {
+                    messages = new ArrayList<>();
+                    for (DocumentSnapshot document : value.getDocuments()) {
+                        try {
+                            chatMessage m = new chatMessage(
+                                    document.get("userPhoto").toString(),
+                                    document.get("userName").toString(),
+                                    document.get("userID").toString(),
+                                    document.get("message").toString()
+                            );
+                            messages.add(m);
+                        } catch (Exception e) {
+                        }
                     }
+                    notifyDataSetChanged();
                 }
-                notifyDataSetChanged();
             }
         });
     }
